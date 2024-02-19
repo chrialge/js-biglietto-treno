@@ -34,19 +34,19 @@ let priceFinal
 if (userAge < 18) {
     let priceFinal = (priceForKilometre / 5) * 4; 
     priceFinal = priceFinal.toFixed(2);
-    alert(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
+    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 } else if(userAge > 65){
     let priceFinal = (priceForKilometre /5) *3;
     priceFinal = priceFinal.toFixed(2);
-    alert(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
+    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 } else{
     let priceFinal = priceForKilometre;
     priceFinal = priceFinal.toFixed(2);
-    alert(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
+    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
 }
