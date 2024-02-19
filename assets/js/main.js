@@ -31,21 +31,19 @@ const userAge = Number(prompt('Quanti hanni hai?'));
         + ALTRIMENTI NIENTE
 */
 
+let priceFinal = priceForKilometre;
+
 if (userAge < 18) {
-    var priceFinalUnderAge = (priceForKilometre / 5) * 4; 
-    priceFinalUnderAge = priceFinalUnderAge.toFixed(2);
+    priceFinal = (priceForKilometre / 5) * 4; 
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 } else if(userAge > 65){
-    var priceFinalOverage = (priceForKilometre /5) *3;
-    priceFinalOverage = priceFinalOverage.toFixed(2);
+    priceFinal = (priceForKilometre /5) *3; 
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
-} else{
-    var priceFinal = priceForKilometre;
-    priceFinal = priceFinal.toFixed(2);
-   
 }
-document.writeln(`Il costo del suo biglietto e di ${priceFinal} ${priceFinalUnderAge} ${priceFinalOverage} \u20AC`);
+
+priceFinal = priceFinal.toFixed(2);
+document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`);
