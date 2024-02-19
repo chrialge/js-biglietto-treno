@@ -30,23 +30,22 @@ const userAge = Number(prompt('Quanti hanni hai?'));
         + ALTRIMENTI SE e over 65 applica sconto del 40%
         + ALTRIMENTI NIENTE
 */
-let priceFinal
+
 if (userAge < 18) {
-    let priceFinal = (priceForKilometre / 5) * 4; 
-    priceFinal = priceFinal.toFixed(2);
-    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
+    var priceFinalUnderAge = (priceForKilometre / 5) * 4; 
+    priceFinalUnderAge = priceFinalUnderAge.toFixed(2);
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 } else if(userAge > 65){
-    let priceFinal = (priceForKilometre /5) *3;
-    priceFinal = priceFinal.toFixed(2);
-    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
+    var priceFinalOverage = (priceForKilometre /5) *3;
+    priceFinalOverage = priceFinalOverage.toFixed(2);
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 } else{
-    let priceFinal = priceForKilometre;
+    var priceFinal = priceForKilometre;
     priceFinal = priceFinal.toFixed(2);
-    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`)
+   
 }
+document.writeln(`Il costo del suo biglietto e di ${priceFinal} ${priceFinalUnderAge} ${priceFinalOverage} \u20AC`);
