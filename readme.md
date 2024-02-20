@@ -40,6 +40,7 @@ Consigli:
 - number()
 - prompt()
 - if/else
+- .tofixed(2)
 
 
 
