@@ -44,6 +44,9 @@ if (userAge < 18) {
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 }
+/*
+    - step 4: output del prezzo tariffario con il possibile sconto
+*/
 
 priceFinal = priceFinal.toFixed(2);
 document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`);
