@@ -4,13 +4,12 @@
     - step 1: chieder quanti kilometri deve percorrere e raccoglierla in una variabile
         - step 1b: calcolare il prezzo in base al kilometraggio ed esso racchiuderla in una variabile 
 */
-
 const userKilometre = Number(prompt('Quanti kilometri devi percorrere?'));
 //rule of debug
 // console.log(typeof userKilometre);
 // console.log(userKilometre);
-
-let priceForKilometre = (userKilometre * 0.21);
+const priceTrain = 0.21
+let priceForKilometre = (userKilometre * priceTrain);
 //rule of debug
 // console.log(typeof priceForKilometre);
 // console.log(priceForKilometre.toFixed(2));
@@ -31,15 +30,20 @@ const userAge = Number(prompt('Quanti hanni hai?'));
         + ALTRIMENTI NIENTE
 */
 
+const discountUnderAge = priceForKilometre / 5;
+const discountOverAge = (priceForKilometre / 5) * 2;
+let discountBanner = "Standar price"
 let priceFinal = priceForKilometre;
 
 if (userAge < 18) {
-    priceFinal = (priceForKilometre / 5) * 4; 
+    priceFinal = priceForKilometre - discountUnderAge; 
+    discountBanner = "20% off"
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
 } else if(userAge > 65){
-    priceFinal = (priceForKilometre /5) *3; 
+    priceFinal = priceForKilometre - discountOverAge;
+    discountBanner = "40% off"
     //rule of debug
     // console.log(typeof priceFinal);
     // console.log(priceFinal.toFixed(2));
@@ -49,4 +53,9 @@ if (userAge < 18) {
 */
 
 priceFinal = priceFinal.toFixed(2);
-document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC`);
+
+if (isNaN(priceFinal)) {
+    alert("devi mettere un numero nei kilometri che percorri")
+} else {
+    document.writeln(`Il costo del suo biglietto e di ${priceFinal} \u20AC | ${discountBanner} `);
+}

@@ -41,6 +41,10 @@ Consigli:
 - prompt()
 - if/else
 - .tofixed(2)
+- isNaN()
+- .writeln
+- alert
+
 
 
 
